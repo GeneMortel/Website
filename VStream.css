@@ -1,0 +1,363 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100%;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Header */
+
+.head {
+    position: sticky;
+    top: 0;
+    padding-left: 8%;
+    padding-right: 8%;
+    z-index: 2;
+    background: white;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;   
+}
+
+.logo {
+    width: 150px;
+    height: 130px;
+    cursor: pointer;
+    margin: -10px 0;
+    padding-top: 10px;
+    padding-bottom: 0;
+}
+
+.menu-icon {
+    width: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: #0652C5;
+}
+
+.browse {
+    margin-top: 0;
+}
+
+select {
+    border: none;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.col-1 {
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 50px;
+}
+
+.col-1 h2 {
+    font-size: 54px;
+}
+
+.button {
+    margin-top: 50px;
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(to right, black, red);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: width 0.5s;
+}
+
+.button img {
+    width: 30px;
+    display: none;
+}
+
+.button:hover img {
+    display: block;
+}
+
+.button:hover {
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Landing Page */
+
+.col-1::after {
+    content:'';
+    width: 10px;
+    height: 57%;
+    background: linear-gradient(black, red);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+}
+
+.col-2 {
+    position: relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.col-2 .landing {
+    width: 90%;
+}
+
+/* Social Media Links */
+
+.social-links i {
+    height: 13px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.social-links a {
+    color: black;
+}
+
+/* Footer */
+
+.foot {
+    text-align: center;
+}
+
+/* Home Page*/
+
+.carousel-inner img {
+    height: 650px;
+}
+
+.selection {
+    margin-top: 10px;
+}
+
+.selection h3 {
+    padding: 5px 0;
+    background: linear-gradient(to right, black, red);
+    text-align: center;
+    height: 40px;
+    color: white;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.genre {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 10px;
+}
+
+.gallery {
+    padding-bottom: 10px;    
+}
+
+.gallery img {
+    width: 200px;
+    height: 300px;
+}
+
+.gallery img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 0.25s;
+
+}
+
+figcaption {
+    width: 200px;
+    padding: 5px;
+}
+
+.caption {
+    text-align: left;
+    padding-left: 0;
+    padding-top: 5px;
+}
+
+.caption p {
+    font-size: 12px;
+}
+
+/* Screening Page */
+
+.movie {
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.mov-caption {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mov-title {
+    padding-top: 10px;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.lidi {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.lidi p {
+    margin-top: 10px;
+    margin-right: 10px;
+    padding-top: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.lidi-btn {
+    margin-top: 10px;
+    margin-right: 5px;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to right, black, red);
+    color: white;
+    font-size: large;
+}
+
+.lidi-btn:hover {
+    opacity: 0.8;
+}
+
+.comment {
+    margin-top: 50px;
+    padding-top: 10px;
+    border-top: 2px ridge red;
+}
+
+/* Resize Script */
+@media only screen and (max-width:700px) {
+    nav ul {
+        width: 100%;
+        background: linear-gradient(black, red);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        z-index: 2;
+    }
+
+    nav ul li {
+        display: block;
+        align-content: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        color: #fff;
+    }
+
+    .menu-icon {
+        display: inline-block;
+    }
+
+    #menuList {
+    overflow: hidden;
+    transition: 0.5s;
+    }
+
+    .row {
+        flex-direction: column-reverse;
+        margin: 50px 0;
+    }
+    
+    .col-2 {
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+
+    .col-2 .landing {
+        width: 77%;
+    }
+
+    .col-1 {
+        flex-basis: 100%;
+    }
+
+    .col-1 h2 {
+        font-size: 35px;
+    }
+    
+    .preview {
+        display: none;
+    }
+
+    .lidi p {
+        font-size: 10px;
+    }
+
+    .lidi-btn {
+        width: 20px;
+        height: 20px;
+    }
+
+    .mov-title {
+        font-size: large;
+    }
+}
